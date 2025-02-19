@@ -1,6 +1,5 @@
 export const config = {
   api: {
-    baseUrl: import.meta.env.VITE_API_URL,
     apiUrl: import.meta.env.VITE_API_URL,
     endpoints: {
       auth: {

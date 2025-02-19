@@ -111,7 +111,7 @@ const CreateSchemaModal = ({ isOpen, onClose, onSchemaCreated, projectId }) => {
       }
 
       toast.success("Schema created successfully");
-      
+
       // Transform the new schema to match the expected format
       const transformedSchema = {
         _id: data.newSchema._id,
@@ -200,7 +200,10 @@ const CreateSchemaModal = ({ isOpen, onClose, onSchemaCreated, projectId }) => {
                     onChange={(e) =>
                       setNewSchema((prev) => ({
                         ...prev,
-                        count: parseInt(e.target.value),
+                        count:
+                          parseInt(e.target.value) > 100
+                            ? 100
+                            : parseInt(e.target.value),
                       }))
                     }
                     min="1"
