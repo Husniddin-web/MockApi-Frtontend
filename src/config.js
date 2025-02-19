@@ -15,7 +15,6 @@ export const config = {
   },
 };
 
-
 // Helper function to get full API URL
 export const getApiUrl = (endpoint) => `${config.api.apiUrl}${endpoint}`;
 
